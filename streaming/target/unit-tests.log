@@ -1,0 +1,112 @@
+14/04/29 11:32:24.555 WARN Utils: Your hostname, localhost resolves to a loopback address: 127.0.0.1, but we couldn't find any external IP address!
+14/04/29 11:32:24.555 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+14/04/29 11:32:24.933 INFO Slf4jLogger: Slf4jLogger started
+14/04/29 11:32:24.978 INFO Remoting: Starting remoting
+14/04/29 11:32:25.119 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://spark@localhost:58071]
+14/04/29 11:32:25.121 INFO Remoting: Remoting now listens on addresses: [akka.tcp://spark@localhost:58071]
+14/04/29 11:32:25.130 INFO SparkEnv: Registering BlockManagerMaster
+14/04/29 11:32:25.158 INFO DiskBlockManager: Created local directory at /var/folders/z6/k__07rqd5_z1x_31jy09z_300000gp/T/spark-local-20140429113225-caa2
+14/04/29 11:32:25.160 INFO MemoryStore: MemoryStore started with capacity 74.4 MB.
+14/04/29 11:32:25.178 INFO ConnectionManager: Bound socket to port 58072 with id = ConnectionManagerId(localhost,58072)
+14/04/29 11:32:25.181 INFO BlockManagerMaster: Trying to register BlockManager
+14/04/29 11:32:25.183 INFO BlockManagerMasterActor$BlockManagerInfo: Registering block manager localhost:58072 with 74.4 MB RAM
+14/04/29 11:32:25.183 INFO BlockManagerMaster: Registered BlockManager
+14/04/29 11:32:25.222 INFO HttpServer: Starting HTTP Server
+14/04/29 11:32:25.279 INFO HttpBroadcast: Broadcast server started at http://127.0.0.1:58073
+14/04/29 11:32:25.283 INFO SparkEnv: Registering MapOutputTracker
+14/04/29 11:32:25.285 INFO HttpFileServer: HTTP File server directory is /var/folders/z6/k__07rqd5_z1x_31jy09z_300000gp/T/spark-9c89b65b-13e3-4f7a-8853-e51f890d809a
+14/04/29 11:32:25.285 INFO HttpServer: Starting HTTP Server
+14/04/29 11:32:25.438 INFO SparkUI: Started Spark Web UI at http://localhost:4040
+14/04/29 11:32:25.476 INFO AppClient$ClientActor: Connecting to master spark://127.0.0.1:7077...
+14/04/29 11:32:25.678 INFO SparkDeploySchedulerBackend: Connected to Spark cluster with app ID app-20140429113225-0019
+14/04/29 11:32:25.680 INFO AppClient$ClientActor: Executor added: app-20140429113225-0019/0 on worker-20140429103159-localhost-57122 (localhost:57122) with 8 cores
+14/04/29 11:32:25.680 INFO SparkDeploySchedulerBackend: Granted executor ID app-20140429113225-0019/0 on hostPort localhost:57122 with 8 cores, 512.0 MB RAM
+14/04/29 11:32:25.693 INFO AppClient$ClientActor: Executor updated: app-20140429113225-0019/0 is now RUNNING
+14/04/29 11:32:25.733 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+14/04/29 11:32:26.115 INFO MemoryStore: ensureFreeSpace(146579) called with curMem=0, maxMem=77974732
+14/04/29 11:32:26.116 INFO MemoryStore: Block broadcast_0 stored as values to memory (estimated size 143.1 KB, free 74.2 MB)
+14/04/29 11:32:26.334 INFO FileInputFormat: Total input paths to process : 1
+14/04/29 11:32:26.347 INFO SparkContext: Starting job: count at SparkConsensusKMeans.java:170
+14/04/29 11:32:26.357 INFO DAGScheduler: Got job 0 (count at SparkConsensusKMeans.java:170) with 2 output partitions (allowLocal=false)
+14/04/29 11:32:26.358 INFO DAGScheduler: Final stage: Stage 0 (count at SparkConsensusKMeans.java:170)
+14/04/29 11:32:26.358 INFO DAGScheduler: Parents of final stage: List()
+14/04/29 11:32:26.363 INFO DAGScheduler: Missing parents: List()
+14/04/29 11:32:26.369 INFO DAGScheduler: Submitting Stage 0 (MappedRDD[2] at map at SparkConsensusKMeans.java:163), which has no missing parents
+14/04/29 11:32:26.407 INFO DAGScheduler: Submitting 2 missing tasks from Stage 0 (MappedRDD[2] at map at SparkConsensusKMeans.java:163)
+14/04/29 11:32:26.408 INFO TaskSchedulerImpl: Adding task set 0.0 with 2 tasks
+14/04/29 11:32:26.911 INFO SparkDeploySchedulerBackend: Registered executor: Actor[akka.tcp://sparkExecutor@localhost:58076/user/Executor#451398489] with ID 0
+14/04/29 11:32:26.918 INFO TaskSetManager: Starting task 0.0:0 as TID 0 on executor 0: localhost (PROCESS_LOCAL)
+14/04/29 11:32:26.922 INFO TaskSetManager: Serialized task 0.0:0 as 1781 bytes in 4 ms
+14/04/29 11:32:26.925 INFO TaskSetManager: Starting task 0.0:1 as TID 1 on executor 0: localhost (PROCESS_LOCAL)
+14/04/29 11:32:26.926 INFO TaskSetManager: Serialized task 0.0:1 as 1781 bytes in 1 ms
+14/04/29 11:32:27.086 INFO BlockManagerMasterActor$BlockManagerInfo: Registering block manager localhost:58081 with 294.6 MB RAM
+14/04/29 11:32:27.869 WARN TaskSetManager: Lost TID 1 (task 0.0:1)
+14/04/29 11:32:27.872 WARN TaskSetManager: Loss was due to java.lang.ClassNotFoundException
+java.lang.ClassNotFoundException: edu.uw.tacoma.tcss.SparkConsensusKMeans$1
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:340)
+	at org.apache.spark.serializer.JavaDeserializationStream$$anon$1.resolveClass(JavaSerializer.scala:37)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1613)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1518)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1774)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1351)
+	at java.io.ObjectInputStream.defaultReadFields(ObjectInputStream.java:1993)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:1918)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1801)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1351)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:371)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:40)
+	at org.apache.spark.scheduler.ResultTask$.deserializeInfo(ResultTask.scala:63)
+	at org.apache.spark.scheduler.ResultTask.readExternal(ResultTask.scala:139)
+	at java.io.ObjectInputStream.readExternalData(ObjectInputStream.java:1840)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:1799)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1351)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:371)
+	at org.apache.spark.serializer.JavaDeserializationStream.readObject(JavaSerializer.scala:40)
+	at org.apache.spark.serializer.JavaSerializerInstance.deserialize(JavaSerializer.scala:62)
+	at org.apache.spark.executor.Executor$TaskRunner$$anonfun$run$1.apply$mcV$sp(Executor.scala:193)
+	at org.apache.spark.deploy.SparkHadoopUtil$$anon$1.run(SparkHadoopUtil.scala:42)
+	at org.apache.spark.deploy.SparkHadoopUtil$$anon$1.run(SparkHadoopUtil.scala:41)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1491)
+	at org.apache.spark.deploy.SparkHadoopUtil.runAsUser(SparkHadoopUtil.scala:41)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:744)
+14/04/29 11:32:27.873 WARN TaskSetManager: Lost TID 0 (task 0.0:0)
+14/04/29 11:32:27.875 INFO TaskSetManager: Loss was due to java.lang.ClassNotFoundException: edu.uw.tacoma.tcss.SparkConsensusKMeans$1 [duplicate 1]
+14/04/29 11:32:27.875 INFO TaskSetManager: Starting task 0.0:0 as TID 2 on executor 0: localhost (PROCESS_LOCAL)
+14/04/29 11:32:27.875 INFO TaskSetManager: Serialized task 0.0:0 as 1781 bytes in 0 ms
+14/04/29 11:32:27.876 INFO TaskSetManager: Starting task 0.0:1 as TID 3 on executor 0: localhost (PROCESS_LOCAL)
+14/04/29 11:32:27.876 INFO TaskSetManager: Serialized task 0.0:1 as 1781 bytes in 0 ms
+14/04/29 11:32:27.894 WARN TaskSetManager: Lost TID 3 (task 0.0:1)
+14/04/29 11:32:27.894 INFO TaskSetManager: Loss was due to java.lang.ClassNotFoundException: edu.uw.tacoma.tcss.SparkConsensusKMeans$1 [duplicate 2]
+14/04/29 11:32:27.894 INFO TaskSetManager: Starting task 0.0:1 as TID 4 on executor 0: localhost (PROCESS_LOCAL)
+14/04/29 11:32:27.895 INFO TaskSetManager: Serialized task 0.0:1 as 1781 bytes in 0 ms
+14/04/29 11:32:27.896 WARN TaskSetManager: Lost TID 2 (task 0.0:0)
+14/04/29 11:32:27.896 INFO TaskSetManager: Loss was due to java.lang.ClassNotFoundException: edu.uw.tacoma.tcss.SparkConsensusKMeans$1 [duplicate 3]
+14/04/29 11:32:27.897 INFO TaskSetManager: Starting task 0.0:0 as TID 5 on executor 0: localhost (PROCESS_LOCAL)
+14/04/29 11:32:27.898 INFO TaskSetManager: Serialized task 0.0:0 as 1781 bytes in 0 ms
+14/04/29 11:32:27.911 WARN TaskSetManager: Lost TID 4 (task 0.0:1)
+14/04/29 11:32:27.911 INFO TaskSetManager: Loss was due to java.lang.ClassNotFoundException: edu.uw.tacoma.tcss.SparkConsensusKMeans$1 [duplicate 4]
+14/04/29 11:32:27.912 INFO TaskSetManager: Starting task 0.0:1 as TID 6 on executor 0: localhost (PROCESS_LOCAL)
+14/04/29 11:32:27.912 INFO TaskSetManager: Serialized task 0.0:1 as 1781 bytes in 0 ms
+14/04/29 11:32:27.913 WARN TaskSetManager: Lost TID 5 (task 0.0:0)
+14/04/29 11:32:27.914 INFO TaskSetManager: Loss was due to java.lang.ClassNotFoundException: edu.uw.tacoma.tcss.SparkConsensusKMeans$1 [duplicate 5]
+14/04/29 11:32:27.914 INFO TaskSetManager: Starting task 0.0:0 as TID 7 on executor 0: localhost (PROCESS_LOCAL)
+14/04/29 11:32:27.915 INFO TaskSetManager: Serialized task 0.0:0 as 1781 bytes in 1 ms
+14/04/29 11:32:27.926 WARN TaskSetManager: Lost TID 6 (task 0.0:1)
+14/04/29 11:32:27.926 INFO TaskSetManager: Loss was due to java.lang.ClassNotFoundException: edu.uw.tacoma.tcss.SparkConsensusKMeans$1 [duplicate 6]
+14/04/29 11:32:27.927 ERROR TaskSetManager: Task 0.0:1 failed 4 times; aborting job
+14/04/29 11:32:27.928 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+14/04/29 11:32:27.929 INFO TaskSetManager: Loss was due to java.lang.ClassNotFoundException: edu.uw.tacoma.tcss.SparkConsensusKMeans$1 [duplicate 7]
+14/04/29 11:32:27.929 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+14/04/29 11:32:27.931 INFO DAGScheduler: Failed to run count at SparkConsensusKMeans.java:170
